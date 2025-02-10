@@ -9,7 +9,7 @@ import { Category } from "@prisma/client"
 import Image from "next/image"
 import Link from "next/link"
 
-export function CategoryNav({receivedCategoriesFromFetch}:{receivedCategoriesFromFetch:Category[]}) {
+export function CategoryNav({receivedCategoriesFromFetch}:{receivedCategoriesFromFetch?:Category[]}) {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = React.useState(false)
   const [canScrollRight, setCanScrollRight] = React.useState(true)
@@ -64,7 +64,7 @@ export function CategoryNav({receivedCategoriesFromFetch}:{receivedCategoriesFro
               className="flex gap-8 overflow-x-auto scrollbar-hide"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              {receivedCategoriesFromFetch.map((category) => (
+              {receivedCategoriesFromFetch?.map((category) => (
                 <button
                   key={category.categoryTitle}
                   onClick={() => setActiveCategory(category.categoryTitle)}

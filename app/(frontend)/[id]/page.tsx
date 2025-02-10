@@ -8,8 +8,7 @@ export default async function page({params}:{params:Promise<{id:string}>}) {
     const singleFetchedCategory = await fetchSingleCategory(id)
     console.log(singleFetchedCategory?.products);
   return (
-    <div className='grid grid-cols-1 md:grid-cols-4 gap-3'>
-        {/* <FrontViewCardSection receivedCategoriesFromFetch = {singleFetchedCategory} /> */}
+    <div className='grid grid-cols-2 md:grid-cols-6 gap-2 px-12 py-4'>
         {
           singleFetchedCategory?.products.map((prod)=>{
             return(

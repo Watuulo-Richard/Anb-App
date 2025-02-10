@@ -6,7 +6,7 @@ const API = `${baseUrl}/api/v1/categories`
 const productsAPI = `${baseUrl}/api/v1/products`
 export async function fetchCategories() {
     try {
-        const response = await fetch(API)
+        const response = await fetch(API,{cache:"no-store"})
         const fetchedCategories = await response.json()
         return fetchedCategories.data as Category[]
     } catch (error) {
@@ -18,7 +18,7 @@ export async function fetchCategories() {
 export async function fetchSingleCategory(id:string) {
     const singleCategoryAPI = `${baseUrl}/api/v1/categories/${id}`
     try {
-        const response = await fetch(singleCategoryAPI)
+        const response = await fetch(singleCategoryAPI,{cache:"no-store"})
         const singleFetchedCategory = await response.json()
              return singleFetchedCategory.data as Category & {
             products:Product[]
@@ -31,7 +31,7 @@ export async function fetchSingleCategory(id:string) {
 
 export async function fetchProducts() {
     try {
-        const response = await fetch(productsAPI)
+        const response = await fetch(productsAPI,{cache:"no-store"})
         const fetchedProducts = await response.json()
         return fetchedProducts.data as Product[]
     } catch (error) {
@@ -43,7 +43,7 @@ export async function fetchProducts() {
 export async function fetchSingleProduct(slug:string) {
     try {
         const singleProductAPI = `${baseUrl}/api/v1/products/${slug}`
-        const response = await fetch(singleProductAPI)
+        const response = await fetch(singleProductAPI,{cache:"no-store"})
         const singleFetchedProduct = await response.json()
         return singleFetchedProduct.data as Product
     } catch (error) {

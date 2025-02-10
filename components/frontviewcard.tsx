@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 import { Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -26,7 +25,7 @@ export function FrontViewCard({productsDataFromFetch}:{productsDataFromFetch:Pro
 
   return (
     <Card
-      className="group relative overflow-hidden rounded-xl transition-shadow hover:shadow-lg"
+      className="group relative overflow-hidden rounded-xl transition-shadow hover:shadow-lg max-w-[350px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
