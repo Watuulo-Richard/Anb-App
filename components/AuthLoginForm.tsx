@@ -22,7 +22,6 @@ export default function AuthLoginForm() {
     // reset,
     formState: { errors },
   } = useForm<LoginInputTypes>();
-//   const router = useRouter();
   async function onSubmit(data: LoginInputTypes) {
     //   console.log(data);
     try {
