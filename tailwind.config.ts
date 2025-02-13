@@ -6,6 +6,7 @@ export default withUt({
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+	"./node_modules/react-tailwindcss-select/dist/index.esm.js",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {

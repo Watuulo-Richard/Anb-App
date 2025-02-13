@@ -18,19 +18,21 @@ endpoint,
 return (
 <Card className="overflow-hidden">
   <CardHeader>
-    <CardTitle>{title}</CardTitle>
+    <CardTitle className="text-xl font-semibold flex items-center justify-center">
+      {title}
+    </CardTitle>
   </CardHeader>
   <CardContent>
-    <Card className="grid gap-2">
+    <Card className="grid gap-2 px-2">
       <Image
         alt={title}
-        className="h-40 w-full rounded-md object-cover"
+        className="h-60 w-full object-contain"
         height="300"
         src={imageUrl}
         width="300"
       />
       <UploadButton
-        className="col-span-full"
+        className="ut-button:bg-gray-950 ut-button:w-full"
         endpoint={endpoint}
         onClientUploadComplete={(res) => {
           // Do something with the response

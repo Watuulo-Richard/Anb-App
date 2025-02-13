@@ -16,3 +16,24 @@ export interface ListingFormData {
     categoryId: string
     slug: string
   }
+
+  export type RegisterInputTypes = {
+    fullName: string;
+    email: string;
+    password: string;
+    phone: string;
+    profileImage: string;
+  };
+
+  export type LoginInputTypes = {
+    email: string;
+    password: string;
+  };
+
+  export type PayloadTypes = {
+    userId: string
+    email: string
+    phone: string
+    image: string
+    expiresAt: Date
+  };

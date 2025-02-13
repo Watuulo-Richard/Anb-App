@@ -36,7 +36,7 @@ export default function ListingForm({receivedCategoriesFromFetch, receivedSingle
     }))
 
   const { step, formData, setStep, updateFormData, resetForm  } = useFormStore()
-  console.log(formData)
+  // console.log(formData)
   const [loading, setLoading] = useState(false);
   // Cleanup on unmount
   useEffect(() => {

@@ -1,13 +1,11 @@
-// import { fetchCategories } from "@/action/fetch";
-// import { NavBar } from "@/components/navigationbar";
-// import { CategoryNav } from "@/components/categorysection";
+import { fetchProducts } from "@/action/fetch";
+import DefaultCardsSection from "@/components/defaultcardssection";
 
 export default async function page() {
-  // const fetchedCategories = await fetchCategories()
+  const fetchedProducts = await fetchProducts()
   return (
-    <>
-      {/* <NavBar /> */}
-      {/* <CategoryNav receivedCategoriesFromFetch = {fetchedCategories}/> */}
-    </>
+    <div className="p-4">
+      <DefaultCardsSection receivedProductsFromFetch = {fetchedProducts}/>
+    </div>
   );
 }

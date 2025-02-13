@@ -1,12 +1,15 @@
 {
     "cSpell.words": [
         "addnewbutton",
+        "allcategoriesdata",
         "allproductsdata",
         "backendcomponents",
         "carouselcardsection",
         "categoryform",
         "categorysection",
         "clientside",
+        "customcarousel",
+        "Dcrypt",
         "ecommerceapi",
         "Favorited",
         "formselect",
@@ -16,9 +19,11 @@
         "multipleimageupload",
         "productsform",
         "submitbutton",
+        "Telemedicine",
         "textinput",
         "turbopack",
         "Uploadthing",
+        "userlogins",
         "utfs"
     ]
 }

@@ -1,8 +1,14 @@
 import SideBar from '@/components/backendcomponents/sidebar'
 import { SidebarProvider } from '@/components/ui/sidebar'
+import { getAuthSession } from '@/lib/dal'
+import { redirect } from 'next/navigation'
 import React, { ReactNode } from 'react'
 
-export default function DashboardLayout({children}:{children:ReactNode}) {
+export default async function DashboardLayout({children}:{children:ReactNode}) {
+  const Auth = await getAuthSession()
+  if(!Auth) {
+    redirect("/login")
+  }
   return (
     <SidebarProvider>
         <div className='flex w-full min-h-screen overflow-hidden">

@@ -116,6 +116,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
             url: "/dashboard/productsform",
           },
           {
+            title: "All Categories",
+            url: "/dashboard/allcategoriesdata",
+          },
+          {
             title: "All Products",
             url: "/dashboard/allproductsdata",
           },

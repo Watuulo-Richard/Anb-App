@@ -9,7 +9,7 @@ import {
 
 // import Select from "react-tailwindcss-select";
 // import { useState } from "react";
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+export const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 import { useForm } from "react-hook-form";
 import TextInput from "./textinput";
 import ImageInput from "./imageupload";
@@ -90,7 +90,7 @@ export default function CategoryForm() {
     // console.log(data)
     try {
         setLoading(true)
-      await fetch(`${baseUrl}/api/v1/categories`, {
+        await fetch(`${baseUrl}/api/v1/categories`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
